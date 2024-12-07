@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #6A1B9A;
+    --secondary-color: #8e24aa;
+    --light-bg: #f4f7fc;
+    --white: #ffffff;
+    --gray: #555;
+    --hover-bg: rgba(255, 255, 255, 0.2);
+    --focus-glow: rgba(76, 175, 80, 0.3);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, var(--light-bg), #d6e5fa);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding-top: 50px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.navbar {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    width: 100%;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar:hover {
+    background-color: #5d1186;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    color: var(--white);
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-menu a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.navbar-menu a:hover {
+    background-color: var(--hover-bg);
+    transform: scale(1.1);
+}
+
+.signin-container {
+    background: linear-gradient(to bottom right, var(--white), #f9f9fb);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    margin-top: 100px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.signin-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.signin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-size: 14px;
+    color: var(--gray);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 8px var(--focus-glow);
+}
+
+.signin-btn {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: bounceIn 1.5s ease;
+}
+
+.signin-btn:hover {
+    background-color: #9c27b0;
+    transform: scale(1.05);
+}
+
+p {
+    text-align: center;
+    font-size: 14px;
+    color: var(--gray);
+    margin-top: 20px;
+}
+
+a {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .logo-text {
+        margin-bottom: 10px;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .signin-container {
+        padding: 30px;
+        margin-top: 120px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input {
+        font-size: 12px;
+    }
+
+    .signin-btn {
+        font-size: 14px;
+    }
+}

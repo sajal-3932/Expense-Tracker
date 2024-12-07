@@ -1,0 +1,264 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Lighter background */
+    color: #333; /* Darker text for better contrast */
+}
+
+h2, h3 {
+    color: #6a0dad;
+    text-align: center;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: linear-gradient(90deg, #6a0dad, #4b0082); /* Gradient background */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.navbar .logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.navbar .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .btn {
+    background-color: white;
+    color: #6a0dad;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px; /* Rounded buttons */
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.navbar .btn:hover {
+    background-color: #4b0082;
+    color: white;
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Container */
+.container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+/* Back to Home Button */
+.back-to-home-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.back-to-home-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.back-to-home-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn {
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin: 10px 5px;
+    display: inline-block;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #4b0082;
+}
+
+.add-expense-btn {
+    background-color: #4CAF50;
+}
+
+.add-expense-btn:hover {
+    background-color: #388e3c;
+}
+
+.view-expenses-btn {
+    background-color: #f44336;
+}
+
+.view-expenses-btn:hover {
+    background-color: #d32f2f;
+}
+
+@media (max-width: 768px) {
+    .btn {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}
+
+/* Add Expense Form */
+.form-container {
+    display: none; /* Hidden initially */
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    transition: all 0.5s ease-in-out; /* Smooth display */
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9; /* Subtle background */
+    transition: border 0.3s ease;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+    border: 1px solid #6a0dad;
+    outline: none;
+    background-color: #fff;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-container button:hover {
+    background-color: #5b0cae;
+    transform: translateY(-3px); /* Slight lift */
+}
+
+/* Expense Table */
+#expenseTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Round table corners */
+}
+
+#expenseTable th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd; /* Subtle border */
+    font-size: 14px;
+}
+
+#expenseTable th {
+    background: linear-gradient(90deg, #6a0dad, #4b0082); /* Gradient header */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#expenseTable td {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+#expenseTable td button {
+    background-color: #4CAF50; /* Green for Edit */
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#expenseTable td button.edit-btn {
+    background-color: #4CAF50; /* Green for Edit */
+}
+
+#expenseTable td button.delete-btn {
+    background-color: #f44336; /* Red for Delete */
+}
+
+#expenseTable td button:hover {
+    background-color: #333;
+    color: white;
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* View Expenses Table */
+.table-container {
+    display: none; /* Hidden initially */
+    margin-top: 30px;
+}
+
+.table-container h3 {
+    text-align: center;
+    color: #6a0dad;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar .btn {
+        margin: 10px 0;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    #expenseTable th, td {
+        font-size: 12px;
+        padding: 10px;
+    }
+}

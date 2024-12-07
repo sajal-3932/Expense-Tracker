@@ -1,0 +1,231 @@
+/* Global Styles */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #131111;
+    line-height: 1.6;
+}
+
+/* Header */
+header, .footer {
+    background-color: #6a0dad;
+    color: white;
+}
+
+.header {
+    background-color: #6a0dad; /* Deep purple background */
+    color: white; /* White text for contrast */
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between; /* Space between title and buttons */
+    align-items: center; /* Center items vertically */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.header-content {
+    text-align: left; /* Align title and subtitle to the left */
+}
+
+.header h1 {
+    font-size: 36px; /* Larger font for the main title */
+    font-weight: bold; /* Emphasize the title */
+    margin: 0;
+}
+
+.header p {
+    font-size: 18px; /* Slightly smaller font for the subtitle */
+    margin: 0;
+    color: #e0e0e0; /* Softer shade of white for subtitle */
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px; /* Space between the buttons */
+}
+
+.btn {
+    background-color: white; /* White background for buttons */
+    color: #6a0dad; /* Purple text for contrast */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #5b0cae; /* Darker purple background on hover */
+    color: white;
+}
+
+.sign-in-btn {
+    border: 2px solid #6a0dad; /* Add a border for Sign In */
+}
+
+.sign-up-btn {
+    background-color: #6a0dad; /* Purple background for Sign Up */
+    color: white;
+}
+
+.sign-up-btn:hover {
+    background-color: #5b0cae; /* Darker purple on hover */
+}
+
+/* Main Content Section */
+.main-content {
+    display: flex;
+    justify-content: flex-start; /* Align content to the left horizontally */
+    align-items: flex-start;     /* Align items to the top vertically */
+    padding: 100px 20px 20px;
+    height: calc(100vh - 80px); /* Full viewport height minus header */
+    background: linear-gradient(135deg, #6a0dad 50%, #fff 50%);
+    text-align: left; /* Keep text left-aligned */
+    flex-direction: column; /* Stack content vertically */
+}
+
+
+.intro {
+    max-width: 600px;
+    padding-left: 20px;
+}
+
+.intro h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 18px;
+    color: #151414;
+    margin-bottom: 30px;
+}
+
+.intro button,
+.btn {
+    background-color: white;
+    color: #6a0dad;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.intro button:hover,
+.btn:hover {
+    background-color: #5b0cae;
+    color: white;
+}
+
+/* Footer */
+footer {
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Mobile-First Responsive Design */
+@media (max-width: 768px) {
+    /* Header adjustments */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .nav button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    /* Main content */
+    .main-content {
+        padding: 0px 20px 20px;
+    }
+
+    .intro h2 {
+        font-size: 30px;
+    }
+
+    .intro p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    /* Button adjustments */
+    .intro button,
+    .btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 12px;
+        padding: 8px 0;
+    }
+}
+
+/* Tablet (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .main-content {
+        padding: 100px 20px 20px;
+    }
+
+    .intro h2 {
+        font-size: 32px;
+    }
+
+    .intro p {
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+
+    .intro button,
+    .btn {
+        font-size: 15px;
+        padding: 9px 18px;
+    }
+}
+
+/* Desktop (1024px and above) */
+@media (min-width: 1024px) {
+    .main-content {
+        padding: 100px 40px 20px;
+    }
+
+    .intro h2 {
+        font-size: 36px;
+    }
+
+    .intro p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .intro button,
+    .btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
